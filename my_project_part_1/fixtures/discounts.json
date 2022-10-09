@@ -1,0 +1,20 @@
+[
+ {
+     "id": 1,
+     "tour": 1,
+     "category": "promo",
+     "discount": 10,
+     "code": "SkyPro",
+     "starts_at": "",
+     "ends_at": ""
+ },
+   {
+     "id": 2,
+     "tour": 2,
+     "category": "promo",
+     "discount": 20,
+     "code": "SkyPro2",
+     "starts_at": "",
+     "ends_at": ""
+  }
+]

@@ -1,12 +1,9 @@
 from django.http import JsonResponse
 
 from django.views.generic import DetailView, ListView
+from discounts.models import Discount
 
-from my_project_part_1.discounts.models import Discount
 
-
-# TODO здесь необходимо реализовать СBV которые
-# TODO бы возвращали данные в соответствии со спецификацией
 class DiscountListView(ListView):
     model = Discount
 
@@ -24,21 +21,14 @@ class DiscountListView(ListView):
                 "starts_at": discount.starts_at if discount.starts_at else "",
                 "ends_at": discount.ends_at if discount.ends_at else "",
             })
-
         return JsonResponse(response, safe=False)
-
-
-
-
 
 
 class DiscountDetailView(DetailView):
     model = Discount
 
-
     def get(self, request, *args, **kwargs):
         super().get(request, *args, **kwargs)
-
         return JsonResponse(
             {
                 "id": self.object.id,

@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+
 from django.views.generic import DetailView, ListView
 
 from discounts.models import Discount

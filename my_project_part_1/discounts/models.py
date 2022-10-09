@@ -17,8 +17,8 @@ class Discount(models.Model):
     tour = models.ForeignKey(Tour, on_delete=models.CASCADE)
     discount = models.PositiveSmallIntegerField(default=10)
     code = models.CharField(max_length=20, default="skypro")
-    start_at = models.DateTimeField(null=True)
-    end_at = models.DateTimeField(null=True)
+    starts_at = models.DateTimeField(null=True)
+    ends_at = models.DateTimeField(null=True)
 
     # TODO дополните модель данными в соответствии со спецификацией
 
