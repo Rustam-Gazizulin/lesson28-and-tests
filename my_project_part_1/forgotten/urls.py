@@ -1,3 +1,6 @@
 # TODO настраиваем urls здесь
+from django.urls import path
 
-urlpatterns = []
+from forgotten.views import ReviewUpdateView
+
+urlpatterns = [path("feedback-update/<int:pk>/", ReviewUpdateView.as_view())]
