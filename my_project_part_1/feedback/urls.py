@@ -1,5 +1,8 @@
 # TODO настраиваем urls здесь
+from django.urls import path
 
-urlpatterns = [
+from feedback.views import ReviewCreateView
+
+urlpatterns = [path("feedback/", ReviewCreateView.as_view())
 
 ]
